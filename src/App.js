@@ -33,13 +33,14 @@ export default function App() {
 
         const bbox = bboxCoords.join(",");
         const query = `
-      [out:json][timeout:25];
-      (
-        node["internet_access"="wlan"](${bbox});
-        node["internet_access"="yes"](${bbox});
-      );
-      out body;
-    `;
+          [out:json][timeout:25];
+          (
+            node["internet_access"~"wlan|yes|wifi|free"](${bbox});
+            node["wifi"="yes"](${bbox});
+            node["amenity"="cafe"](${bbox});
+          );
+          out body;
+        `;
 
         try {
             const res = await axios.get("https://overpass-api.de/api/interpreter", {
