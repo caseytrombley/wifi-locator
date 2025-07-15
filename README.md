@@ -63,6 +63,7 @@ Discover public Wi-Fi hotspots across US cities with this interactive React app.
 ## Possible Improvements
 
 - Add hotspot type filters (free, paid, cafes, libraries)
+- Display hotspot addresses
 - Display hotspot coverage radius
 - Allow users to save favorite hotspots
 - Add user reporting and feedback system
