@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# WiFi Locator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Discover public Wi-Fi hotspots across US cities with this interactive React app. Search for any city, explore nearby hotspots on the map, and get detailed info — perfect for travelers, remote workers, or anyone needing reliable internet access on the go.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **City Search with Autocomplete:** Quickly find and select US cities with smart suggestions.
+- **Interactive Map:** Leaflet-powered map that centers on your selected city.
+- **Live Wi-Fi Hotspots:** Fetches real-time hotspot data from OpenStreetMap’s Overpass API.
+- **Hotspot Details:** Click markers to see hotspot name and address.
+- **Responsive UI:** Floating search panel overlay that can be toggled without affecting the map view.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14+ recommended)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+    git clone <your-repo-url>
+    cd <your-repo-folder>
+```
+2. Install dependencies:
+  
+```bash
+    npm install
+``` 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run the app:
 
-### `npm run eject`
+```bash
+    npm start
+``` 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open http://localhost:3000 in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## How It Works
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Use the search overlay to find a city in the US.
+- The map recenters on your selected city.
+- The app queries OpenStreetMap's Overpass API to get Wi-Fi hotspots near the current map viewport.
+- Hotspots appear as markers; clicking them reveals details.
+- Pan and zoom to load more hotspots dynamically.
 
-## Learn More
+## Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- Leaflet and React-Leaflet
+- OpenStreetMap Overpass API for Wi-Fi hotspot data
+- Nominatim API for geocoding and autocomplete
+- Axios for API requests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Possible Improvements
 
-### Code Splitting
+- Add hotspot type filters (free, paid, cafes, libraries)
+- Display hotspot coverage radius
+- Allow users to save favorite hotspots
+- Add user reporting and feedback system
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License © Casey Trombley
